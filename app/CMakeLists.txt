@@ -30,4 +30,4 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Core
         liba
 )
 
-set_target_properties(utext PROPERTIES RUNTIME_OUTPUT_DIRECTORY ..)
+set_target_properties(utext PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../..)

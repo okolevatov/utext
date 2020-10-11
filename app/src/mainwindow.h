@@ -7,6 +7,7 @@
 #include <QDir>
 #include <QApplication>
 #include <QMessageBox>
+#include <iostream>
 #include "main_lib.h"
 
 namespace Ui {
@@ -28,7 +29,7 @@ private slots:
 
   void on_actionSave_triggered();
   
-  void on_actionTheme_triggered();
+  // void on_actionTheme_triggered();
   
   void on_actionHealth_Care_Mode_triggered();
   
@@ -36,4 +37,5 @@ private slots:
   
 private:
   Ui::MainWindow *ui;
+  QString path_file;
 };

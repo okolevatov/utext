@@ -1,12 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::MainWindow)
 {
   ui->setupUi(this);
+  ui->menuBar->setNativeMenuBar(false);
 }
 
 MainWindow::~MainWindow()
@@ -21,12 +21,13 @@ void MainWindow::on_actionOpen_triggered()
   dialog.setFileMode(QFileDialog::Directory);
   QString filename = dialog.getOpenFileName();
   QFile file(filename);
-  if (!file.open(QFile::ReadOnly | QFile::Text)) {
+  if (!file.open(QFile::ReadOnly | QFile::Text))
     QMessageBox::warning(this, "alarm", "file not open");
-  }
+  path_file = filename;
   QTextStream in(&file);
   QString text = in.readAll();
-  ui->textEdit->setPlainText(text);
+  ui->TextEdit->setPlainText(text);
+  ui->TextEdit->setDocumentTitle("Lesha");
 }
 
 void MainWindow::on_actionSave_triggered()
@@ -34,10 +35,10 @@ void MainWindow::on_actionSave_triggered()
     std::cout << "Saved\n";
 }
 
-void MainWindow::on_actionTheme_triggered()
-{
-    std::cout << "Theme\n";
-}
+// void MainWindow::on_actionTheme_triggered()
+// {
+//     std::cout << "Theme\n";
+// }
 
 void MainWindow::on_actionHard_Mode_triggered()
 {
