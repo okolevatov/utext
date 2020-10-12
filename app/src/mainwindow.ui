@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1012</width>
-    <height>776</height>
+    <width>1253</width>
+    <height>848</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -22,6 +22,9 @@
     <height>300</height>
    </size>
   </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
   <property name="windowTitle">
    <string>utext</string>
   </property>
@@ -32,55 +35,82 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <widget class="QTreeView" name="treeView">
+   <widget class="QSplitter" name="splitter">
     <property name="geometry">
      <rect>
-      <x>12</x>
-      <y>12</y>
-      <width>201</width>
-      <height>681</height>
+      <x>10</x>
+      <y>10</y>
+      <width>1581</width>
+      <height>911</height>
      </rect>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
-    <property name="minimumSize">
-     <size>
-      <width>200</width>
-      <height>0</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>201</width>
-      <height>16777215</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="TextEdit">
-    <property name="geometry">
-     <rect>
-      <x>223</x>
-      <y>12</y>
-      <width>731</width>
-      <height>681</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>300</width>
-      <height>0</height>
-     </size>
-    </property>
+    <widget class="QTreeView" name="treeView">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>300</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>-1</number>
+      </property>
+      <item>
+       <widget class="QPlainTextEdit" name="TextEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOn</enum>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustToContents</enum>
+        </property>
+        <property name="plainText">
+         <string/>
+        </property>
+        <property name="cursorWidth">
+         <number>1</number>
+        </property>
+        <property name="centerOnScroll">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -89,7 +119,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1012</width>
+     <width>1253</width>
      <height>22</height>
     </rect>
    </property>
