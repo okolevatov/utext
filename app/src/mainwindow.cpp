@@ -3,10 +3,18 @@
 
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
-  ui(new Ui::MainWindow)
+  ui(new Ui::MainWindow), m_model(new QFileSystemModel(this))
 {
   ui->setupUi(this);
   ui->menuBar->setNativeMenuBar(false);
+  //m_model = new QFileSystemModel(this);
+
+  ui->treeView->setModel(m_model);
+  ui->treeView->setHeaderHidden(true);
+  ui->treeView->hideColumn(1);
+  ui->treeView->hideColumn(2);
+  ui->treeView->hideColumn(3);
+  ui->treeView->hideColumn(4);
 }
 
 MainWindow::~MainWindow()
@@ -17,28 +25,26 @@ MainWindow::~MainWindow()
 void MainWindow::on_actionOpen_triggered()
 {
   QFileDialog dialog(this);
-  dialog.setDirectory(QDir::homePath());
+  dialog.setDirectory(QDir::homePath()); 
   dialog.setFileMode(QFileDialog::Directory);
   QString filename = dialog.getOpenFileName();
   QFile file(filename);
   if (!file.open(QFile::ReadOnly | QFile::Text))
     QMessageBox::warning(this, "alarm", "file not open");
+  //ui->listWidget->addItem(filename);
+  //ui->treeView->setModel(m_model);
+  m_model->setRootPath(QDir::currentPath()); //QDir::homePath()
   path_file = filename;
   QTextStream in(&file);
   QString text = in.readAll();
-  ui->TextEdit->setPlainText(text);
-  ui->TextEdit->setDocumentTitle("Lesha");
+  ui->textEdit->setPlainText(text);
+  ui->textEdit->setDocumentTitle("Lesha");
 }
 
 void MainWindow::on_actionSave_triggered()
 {
     std::cout << "Saved\n";
 }
-
-// void MainWindow::on_actionTheme_triggered()
-// {
-//     std::cout << "Theme\n";
-// }
 
 void MainWindow::on_actionHard_Mode_triggered()
 {

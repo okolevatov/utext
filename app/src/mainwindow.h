@@ -5,6 +5,7 @@
 #include <QFileDialog>
 #include <QTextStream>
 #include <QDir>
+#include <QFileSystemModel>
 #include <QApplication>
 #include <QMessageBox>
 #include <iostream>
@@ -29,8 +30,6 @@ private slots:
 
   void on_actionSave_triggered();
   
-  // void on_actionTheme_triggered();
-  
   void on_actionHealth_Care_Mode_triggered();
   
   void on_actionNormal_Mode_triggered();
@@ -38,4 +37,5 @@ private slots:
 private:
   Ui::MainWindow *ui;
   QString path_file;
+  QFileSystemModel *m_model;
 };

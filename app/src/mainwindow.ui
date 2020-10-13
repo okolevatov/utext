@@ -60,7 +60,7 @@
      </size>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="TextEdit">
+   <widget class="QPlainTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
       <x>223</x>
