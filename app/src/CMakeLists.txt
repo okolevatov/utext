@@ -4,9 +4,11 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(SOURCES mainwindow.cpp lib.cpp)
 
+set(HEADERS mainwindow.h main_lib.h)
+
 set(UI mainwindow.ui)
 
-add_library(liba ${SOURCES} ${UI})
+add_library(liba ${SOURCES} ${HEADERS} ${UI})
 
 target_link_libraries(liba PRIVATE Qt${QT_VERSION_MAJOR}::Core
         Qt${QT_VERSION_MAJOR}::Widgets
