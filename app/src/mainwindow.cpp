@@ -27,23 +27,30 @@ void MainWindow::on_actionOpen_triggered()
   dialog.setDirectory(QDir::homePath()); 
   dialog.setFileMode(QFileDialog::Directory);
   QString filename = dialog.getOpenFileName();
+  QString dirname = dialog.getExistingDirectory();
+  if (filename.isEmpty() && dirname.isEmpty())
+    return ;
   QFile file(filename);
-  if (!file.open(QFile::ReadOnly | QFile::Text))
-    QMessageBox::warning(this, "alarm", "file not open");
 
-  m_model->setRootPath(QDir::currentPath()); //QDir::homePath()
+  std::cout << "FILE : " << filename.toStdString() << " " << "DIR : " << dirname.toStdString() << std::endl;
 
-  m_path_file = filename;
-
-  QTextStream in(&file);
-  QString text = in.readAll();
-  ui->TextEdit->setPlainText(text);
-  ui->TextEdit->setDocumentTitle("Lesha");
+  if (file.open(QFile::ReadOnly | QFile::Text)) {
+    m_model->setRootPath(QDir::currentPath()); 
+    m_path_file = filename;
+    QTextStream in(&file);
+    QString text = in.readAll();
+    ui->TextEdit->setPlainText(text);
+  }
 }
 
 void MainWindow::on_actionSave_triggered()
 {
     std::cout << "Saved\n";
+}
+
+void MainWindow::on_actionSave_as_triggered()
+{
+    std::cout << "Saved as\n";
 }
 
 void MainWindow::on_actionHard_Mode_triggered()
