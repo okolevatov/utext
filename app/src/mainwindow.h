@@ -58,6 +58,9 @@ private slots:
   void on_actionHealth_Care_Mode_triggered();
   
   void on_actionNormal_Mode_triggered();
+
+protected:
+  void resizeEvent(QResizeEvent* event);
   
 private:
   Ui::MainWindow *ui;

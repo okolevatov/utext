@@ -67,3 +67,13 @@ void MainWindow::on_actionNormal_Mode_triggered()
 {
     std::cout << "NormalMode\n";
 }
+
+void MainWindow::resizeEvent(QResizeEvent *event)
+{
+    if(event)
+    {
+        std::cout << "Old size : Y = " << event->oldSize().height() << " X = " << event->oldSize().width();
+        std::cout << "\nNew size : Y = " << event->size().height() << " X = " << event->size().width();
+        std::cout << "\n CURSOR POSITION = " << ui->TextEdit->textCursor().position() << "\n";
+    }
+}
