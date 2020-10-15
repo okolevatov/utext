@@ -46,8 +46,10 @@ public:
   explicit MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
-private slots:
-  void on_actionOpen_triggered();
+private slots: // all actions 
+  void on_actionOpen_Folder_triggered(); 
+
+  void on_actionOpen_File_triggered();
 
   void on_actionHard_Mode_triggered();
 
