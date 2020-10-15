@@ -21,18 +21,23 @@ MainWindow::~MainWindow()
   delete ui;
 }
 
-void MainWindow::on_actionOpen_triggered()
+void MainWindow::on_actionOpen_Folder_triggered()
 {
   QFileDialog dialog(this);
   dialog.setDirectory(QDir::homePath()); 
   dialog.setFileMode(QFileDialog::Directory);
-  QString filename = dialog.getOpenFileName();
   QString dirname = dialog.getExistingDirectory();
-  if (filename.isEmpty() && dirname.isEmpty())
+  if (dirname.isEmpty())
     return ;
-  QFile file(filename);
+}
 
-  std::cout << "FILE : " << filename.toStdString() << " " << "DIR : " << dirname.toStdString() << std::endl;
+void MainWindow::on_actionOpen_File_triggered() {
+  QFileDialog dialog(this);
+  dialog.setDirectory(QDir::homePath()); 
+  dialog.setFileMode(QFileDialog::Directory);
+  QString filename = dialog.getOpenFileName();
+
+  QFile file(filename);
 
   if (file.open(QFile::ReadOnly | QFile::Text)) {
     m_model->setRootPath(QDir::currentPath()); 
@@ -41,6 +46,7 @@ void MainWindow::on_actionOpen_triggered()
     QString text = in.readAll();
     ui->TextEdit->setPlainText(text);
   }
+  
 }
 
 void MainWindow::on_actionSave_triggered()

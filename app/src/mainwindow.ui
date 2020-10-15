@@ -6,8 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
+<<<<<<< HEAD
     <width>1199</width>
     <height>949</height>
+=======
+    <width>1572</width>
+    <height>1000</height>
+>>>>>>> my
    </rect>
   </property>
   <property name="sizePolicy">
@@ -40,8 +45,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1200</width>
-      <height>900</height>
+      <width>1561</width>
+      <height>851</height>
      </rect>
     </property>
     <property name="orientation">
@@ -72,42 +77,8 @@
     </widget>
     <widget class="QWidget" name="horizontalLayoutWidget">
      <layout class="QHBoxLayout" name="horizontalLayout">
-      <property name="spacing">
-       <number>-1</number>
-      </property>
       <item>
-       <widget class="QPlainTextEdit" name="TextEdit">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>300</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="acceptDrops">
-         <bool>false</bool>
-        </property>
-        <property name="horizontalScrollBarPolicy">
-         <enum>Qt::ScrollBarAlwaysOn</enum>
-        </property>
-        <property name="sizeAdjustPolicy">
-         <enum>QAbstractScrollArea::AdjustToContents</enum>
-        </property>
-        <property name="plainText">
-         <string/>
-        </property>
-        <property name="cursorWidth">
-         <number>1</number>
-        </property>
-        <property name="centerOnScroll">
-         <bool>true</bool>
-        </property>
-       </widget>
+       <widget class="QTextEdit" name="TextEdit"/>
       </item>
      </layout>
     </widget>
@@ -119,7 +90,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1199</width>
+     <width>1572</width>
      <height>22</height>
     </rect>
    </property>
@@ -127,7 +98,15 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionOpen"/>
+    <widget class="QMenu" name="menuOpen">
+     <property name="title">
+      <string>Open</string>
+     </property>
+     <addaction name="actionOpen_Folder"/>
+     <addaction name="separator"/>
+     <addaction name="actionOpen_File"/>
+    </widget>
+    <addaction name="menuOpen"/>
     <addaction name="actionSave"/>
     <addaction name="actionSave_as"/>
    </widget>
@@ -148,11 +127,6 @@
     <string>Hard Mode</string>
    </property>
   </action>
-  <action name="actionOpen">
-   <property name="text">
-    <string>Open</string>
-   </property>
-  </action>
   <action name="actionSave">
    <property name="text">
     <string>Save</string>
@@ -161,6 +135,16 @@
   <action name="actionSave_as">
    <property name="text">
     <string>Save as</string>
+   </property>
+  </action>
+  <action name="actionOpen_Folder">
+   <property name="text">
+    <string>Open Folder</string>
+   </property>
+  </action>
+  <action name="actionOpen_File">
+   <property name="text">
+    <string>Open File</string>
    </property>
   </action>
  </widget>
