@@ -80,6 +80,6 @@ void MainWindow::resizeEvent(QResizeEvent *event)
     {
         std::cout << "Old size : Y = " << event->oldSize().height() << " X = " << event->oldSize().width();
         std::cout << "\nNew size : Y = " << event->size().height() << " X = " << event->size().width();
-        std::cout << "\n CURSOR POSITION = " << ui->TextEdit->textCursor().position() << "\n";
+        // std::cout << "\n CURSOR POSITION = " << ui->TextEdit->textCursor().position() << "\n";
     }
 }

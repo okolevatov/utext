@@ -13,6 +13,7 @@
 #include <QPushButton>
 #include <QStringList>
 #include <QModelIndex>
+#include <QResizeEvent>
 #include <QDebug>
 
 #include <iostream>
