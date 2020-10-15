@@ -6,13 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-<<<<<<< HEAD
-    <width>1199</width>
-    <height>949</height>
-=======
     <width>1572</width>
     <height>1000</height>
->>>>>>> my
    </rect>
   </property>
   <property name="sizePolicy">
