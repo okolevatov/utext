@@ -19,6 +19,7 @@
 #include <iostream>
 
 #include "main_lib.h"
+#include "findandreplace.h"
 
 namespace Ui {
     class MainWindow;
@@ -74,12 +75,12 @@ private slots: // all actions
 
     void on_actionFind_and_replace_triggered();
 
-protected:
-    void resizeEvent(QResizeEvent* event);
+// protected:
+//     void resizeEvent(QResizeEvent* event);
   
 private:
     Ui::MainWindow *ui;
+    FindAndReplace m_sec_win;
     QString m_path_file;
     QFileSystemModel *m_model;
 };
-
