@@ -80,6 +80,36 @@ void MainWindow::resizeEvent(QResizeEvent *event)
     {
         std::cout << "Old size : Y = " << event->oldSize().height() << " X = " << event->oldSize().width();
         std::cout << "\nNew size : Y = " << event->size().height() << " X = " << event->size().width();
-        // std::cout << "\n CURSOR POSITION = " << ui->TextEdit->textCursor().position() << "\n";
     }
 }
+
+void MainWindow::on_actionUndo_triggered()
+{
+    ui->TextEdit->undo();
+}
+
+void MainWindow::on_actionRedo_triggered()
+{
+    ui->TextEdit->redo();
+}
+
+void MainWindow::on_actionCopy_triggered()
+{
+    ui->TextEdit->copy();
+}
+
+void MainWindow::on_actionCut_triggered()
+{
+    ui->TextEdit->cut();
+}
+
+void MainWindow::on_actionPaste_triggered()
+{
+    ui->TextEdit->paste();
+}
+
+void MainWindow::on_actionFind_and_replace_triggered()
+{
+  
+}
+

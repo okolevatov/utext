@@ -21,7 +21,7 @@
 #include "main_lib.h"
 
 namespace Ui {
-  class MainWindow;
+    class MainWindow;
 }
 
 // class FileDialog : public QFileDialog
@@ -41,32 +41,45 @@ namespace Ui {
 
 class MainWindow : public QMainWindow
 {
-  Q_OBJECT
+      Q_OBJECT
 
 public:
-  explicit MainWindow(QWidget *parent = nullptr);
-  ~MainWindow();
+    explicit MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
 
 private slots: // all actions 
-  void on_actionOpen_Folder_triggered(); 
+    void on_actionOpen_Folder_triggered(); 
 
-  void on_actionOpen_File_triggered();
+    void on_actionOpen_File_triggered();
 
-  void on_actionHard_Mode_triggered();
+    void on_actionHard_Mode_triggered();
 
-  void on_actionSave_triggered();
+    void on_actionSave_triggered();
 
-  void on_actionSave_as_triggered();
-  
-  void on_actionHealth_Care_Mode_triggered();
-  
-  void on_actionNormal_Mode_triggered();
+    void on_actionSave_as_triggered();
+    
+    void on_actionHealth_Care_Mode_triggered();
+    
+    void on_actionNormal_Mode_triggered();
+
+    void on_actionUndo_triggered();
+
+    void on_actionRedo_triggered();
+
+    void on_actionCopy_triggered();
+
+    void on_actionCut_triggered();
+
+    void on_actionPaste_triggered();
+
+    void on_actionFind_and_replace_triggered();
 
 protected:
-  void resizeEvent(QResizeEvent* event);
+    void resizeEvent(QResizeEvent* event);
   
 private:
-  Ui::MainWindow *ui;
-  QString m_path_file;
-  QFileSystemModel *m_model;
+    Ui::MainWindow *ui;
+    QString m_path_file;
+    QFileSystemModel *m_model;
 };
+
