@@ -10,10 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
     
     ui->treeView->setModel(m_model);
     ui->treeView->setHeaderHidden(true);
-    ui->treeView->hideColumn(1);
-    ui->treeView->hideColumn(2);
-    ui->treeView->hideColumn(3);
-    ui->treeView->hideColumn(4);
+    for (int i = 1; i < m_model->columnCount(); ++i)
+        ui->treeView->hideColumn(i);
 }
 
 MainWindow::~MainWindow()
@@ -48,7 +46,11 @@ void MainWindow::on_actionOpen_File_triggered() {
 
   if (file.open(QFile::ReadOnly | QFile::Text)) {
     m_path_file = filename;
-    m_path_dir.clear();
+    QFileInfo fileInfo(filename);
+    m_path_dir = fileInfo.dir().absolutePath();
+
+    m_model->setRootPath(m_path_dir); 
+    ui->treeView->setRootIndex(m_model->index(m_path_dir));
 
     QTextStream in(&file);
     QString text = in.readAll();

@@ -15,8 +15,10 @@
 #include <QModelIndex>
 #include <QResizeEvent>
 #include <QDebug>
+#include <QFileInfo>
 
 #include <iostream>
+#include <string>
 
 #include "main_lib.h"
 #include "findandreplace.h"
