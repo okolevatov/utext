@@ -27,8 +27,15 @@ void MainWindow::on_actionOpen_Folder_triggered()
   dialog.setDirectory(QDir::homePath()); 
   dialog.setFileMode(QFileDialog::Directory);
   QString dirname = dialog.getExistingDirectory();
+
   if (dirname.isEmpty())
     return ;
+
+  m_path_dir = dirname;
+  m_path_file.clear();
+
+  m_model->setRootPath(dirname); 
+  ui->treeView->setRootIndex(m_model->index(dirname));
 }
 
 void MainWindow::on_actionOpen_File_triggered() {
@@ -40,8 +47,9 @@ void MainWindow::on_actionOpen_File_triggered() {
   QFile file(filename);
 
   if (file.open(QFile::ReadOnly | QFile::Text)) {
-    m_model->setRootPath(QDir::currentPath()); 
     m_path_file = filename;
+    m_path_dir.clear();
+
     QTextStream in(&file);
     QString text = in.readAll();
     ui->TextEdit->setPlainText(text);

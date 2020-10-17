@@ -24,21 +24,6 @@ namespace Ui {
   class MainWindow;
 }
 
-// class FileDialog : public QFileDialog
-// {
-//     Q_OBJECT
-//     public:
-//         explicit FileDialog(QWidget *parent);
-//         QStringList selected() const;
-//     public slots:
-//         void openClicked();
-//     private:
-//         QTreeView *treeView;
-//         QPushButton *openButton;
-//         QStringList selectedFilePaths;
-// };
-
-
 class MainWindow : public QMainWindow
 {
   Q_OBJECT
@@ -68,5 +53,6 @@ protected:
 private:
   Ui::MainWindow *ui;
   QString m_path_file;
+  QString m_path_dir;
   QFileSystemModel *m_model;
 };
