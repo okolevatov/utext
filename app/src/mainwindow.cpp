@@ -1,17 +1,44 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <vector>
 
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow), m_model(new QFileSystemModel(this))
+    QMainWindow(parent), ui(new Ui::MainWindow), 
+    m_model(new QFileSystemModel(this))
 {
     ui->setupUi(this);
     ui->menuBar->setNativeMenuBar(false);
     
     ui->treeView->setModel(m_model);
     ui->treeView->setHeaderHidden(true);
-    for (int i = 1; i < m_model->columnCount(); ++i)
+    ui->treeView->setSelectionBehavior (QAbstractItemView::SelectRows);
+    for (int i = 1; i < m_model->columnCount(); i++)
         ui->treeView->hideColumn(i);
+    QObject::connect(ui->treeView, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(elementClicked(QModelIndex)));
+}
+
+void MainWindow::elementClicked(const QModelIndex& current) {
+    QModelIndex p = current;
+    std::vector<QString> vec;
+
+
+    while(p.isValid()) {
+        vec.push_back(p.data().toString());
+        p = p.parent();
+    }
+    // for (std::vector<QString>::iterator it = vec.rbegin(); it != vec.rend(); it++) {
+    //     qDebug << *it << "/";
+    // }
+    for (const auto& i : vec)
+        qDebug() << i << " ";
+
+    //     const QString tmp = current.data().toString();
+    //     qDebug() << tmp;
+
+    //     QString filename = m_path_dir + "/" + tmp;
+    //     QFile file(filename);
+    //     QTextStream in(&file);
+    //     ui->TextEdit->setPlainText(in.readAll());
 }
 
 MainWindow::~MainWindow()
@@ -21,42 +48,41 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionOpen_Folder_triggered()
 {
-  QFileDialog dialog(this);
-  dialog.setDirectory(QDir::homePath()); 
-  dialog.setFileMode(QFileDialog::Directory);
-  QString dirname = dialog.getExistingDirectory();
+    QFileDialog dialog(this);
+    dialog.setDirectory(QDir::homePath()); 
+    dialog.setFileMode(QFileDialog::Directory);
+    QString dirname = dialog.getExistingDirectory();
 
-  if (dirname.isEmpty())
-    return ;
+    if (dirname.isEmpty())
+        return ;
 
-  m_path_dir = dirname;
-  m_path_file.clear();
+    m_path_dir = dirname;
+    m_path_file.clear();
 
-  m_model->setRootPath(dirname); 
-  ui->treeView->setRootIndex(m_model->index(dirname));
+    m_model->setRootPath(dirname); 
+    ui->treeView->setRootIndex(m_model->index(dirname));
 }
 
 void MainWindow::on_actionOpen_File_triggered() {
-  QFileDialog dialog(this);
-  dialog.setDirectory(QDir::homePath()); 
-  dialog.setFileMode(QFileDialog::Directory);
-  QString filename = dialog.getOpenFileName();
+    QFileDialog dialog(this);
+    dialog.setDirectory(QDir::homePath()); 
+    dialog.setFileMode(QFileDialog::Directory);
+    QString filename = dialog.getOpenFileName();
 
-  QFile file(filename);
+    QFile file(filename);
 
-  if (file.open(QFile::ReadOnly | QFile::Text)) {
-    m_path_file = filename;
-    QFileInfo fileInfo(filename);
-    m_path_dir = fileInfo.dir().absolutePath();
+    if (file.open(QFile::ReadOnly | QFile::Text)) {
+        m_path_file = filename;
+        QFileInfo fileInfo(filename);
+        m_path_dir = fileInfo.dir().absolutePath();
 
-    m_model->setRootPath(m_path_dir); 
-    ui->treeView->setRootIndex(m_model->index(m_path_dir));
+        m_model->setRootPath(m_path_dir); 
+        ui->treeView->setRootIndex(m_model->index(m_path_dir));
 
-    QTextStream in(&file);
-    QString text = in.readAll();
-    ui->TextEdit->setPlainText(text);
-  }
-  
+        QTextStream in(&file);
+        QString text = in.readAll();
+        ui->TextEdit->setPlainText(text);
+    }
 }
 
 void MainWindow::on_actionSave_triggered()

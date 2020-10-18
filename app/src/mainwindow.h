@@ -62,6 +62,8 @@ private slots: // all actions
 
     void on_actionFind_and_replace_triggered();
 
+    void elementClicked(const QModelIndex& current);
+
 // protected:
 //     void resizeEvent(QResizeEvent* event);
 
