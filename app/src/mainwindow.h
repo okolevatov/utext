@@ -64,6 +64,8 @@ private slots: // all actions
 
     void elementClicked(const QModelIndex& current);
 
+    void edit();
+
 // protected:
 //     void resizeEvent(QResizeEvent* event);
 
@@ -73,4 +75,5 @@ private:
     QString m_path_file;
     QString m_path_dir;
     QFileSystemModel *m_model;
+    QAction *m_edits;
 };

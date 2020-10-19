@@ -4,41 +4,49 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent), ui(new Ui::MainWindow), 
-    m_model(new QFileSystemModel(this))
+    m_model(new QFileSystemModel(this)),
+    m_edits(new QAction("Edit"))
 {
     ui->setupUi(this);
     ui->menuBar->setNativeMenuBar(false);
+
+    QObject::connect(m_edits, SIGNAL(triggered()), this, SLOT(edit()));
+    ui->menuBar->addAction(m_edits);
     
     ui->treeView->setModel(m_model);
     ui->treeView->setHeaderHidden(true);
     ui->treeView->setSelectionBehavior (QAbstractItemView::SelectRows);
     for (int i = 1; i < m_model->columnCount(); i++)
         ui->treeView->hideColumn(i);
+    ui->actionUndo->setIcon(QIcon("./app/resources/undo.svg"));
+    ui->actionRedo->setIcon(QIcon("./app/resources/redo.svg"));
+    ui->toolBar->hide();
     QObject::connect(ui->treeView, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(elementClicked(QModelIndex)));
+}
+
+void MainWindow::edit() {
+    ui->toolBar->show();
 }
 
 void MainWindow::elementClicked(const QModelIndex& current) {
     QModelIndex p = current;
     std::vector<QString> vec;
-
+    QString tmp_path;
 
     while(p.isValid()) {
         vec.push_back(p.data().toString());
         p = p.parent();
     }
-    // for (std::vector<QString>::iterator it = vec.rbegin(); it != vec.rend(); it++) {
-    //     qDebug << *it << "/";
-    // }
-    for (const auto& i : vec)
-        qDebug() << i << " ";
-
-    //     const QString tmp = current.data().toString();
-    //     qDebug() << tmp;
-
-    //     QString filename = m_path_dir + "/" + tmp;
-    //     QFile file(filename);
-    //     QTextStream in(&file);
-    //     ui->TextEdit->setPlainText(in.readAll());
+    std::reverse(vec.begin(), vec.end());
+    for (const auto& i : vec) {
+        if (i.toStdString() != "/")
+            tmp_path += "/" + i;
+    }
+    QFile file(tmp_path);
+    if (file.open(QFile::ReadOnly | QFile::Text)) {
+        QTextStream in(&file);
+        ui->TextEdit->setPlainText(in.readAll());
+    }
 }
 
 MainWindow::~MainWindow()
