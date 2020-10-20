@@ -27,6 +27,7 @@ void FindAndReplace::on_pushButton_2_clicked()
 	QString find_text = ui->textEdit_2->toPlainText();
 	QString replace_text = ui->textEdit_3->toPlainText();
 	std::cout << find_text.toStdString() << " need to replace on " << replace_text.toStdString() << "\n";
+	
 }
 
 void FindAndReplace::done(int r) {

@@ -154,5 +154,7 @@ void MainWindow::on_actionPaste_triggered()
 
 void MainWindow::on_actionFind_and_replace_triggered()
 {
+    QString text_from_plain = ui->textEdit->toPlainText();
+    m_sec_win.m_text = text_from_plain.toStdString();
     m_sec_win.show();
 }
