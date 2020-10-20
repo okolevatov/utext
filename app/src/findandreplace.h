@@ -25,5 +25,6 @@ protected:
 
 private:
   Ui::FindAndReplace *ui;
+  std::string m_text;
 };
 //closeEvent(), done()QDialog::Rejected.
