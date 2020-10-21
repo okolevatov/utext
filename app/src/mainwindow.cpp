@@ -7,6 +7,12 @@ MainWindow::MainWindow(QWidget *parent) :
     m_model(new QFileSystemModel(this)),
     m_edits(new QAction("Edit"))
 {
+	QPalette mainPalette = palette();
+	mainPalette.setColor(backgroundRole(), QColor(44, 238, 214));
+	setPalette(mainPalette);
+	setAutoFillBackground(true);
+	// ui->centralWidget->setPalette(mainPalette); SIGFAULT
+	
     ui->setupUi(this);
     ui->menuBar->setNativeMenuBar(false);
 
@@ -154,7 +160,8 @@ void MainWindow::on_actionPaste_triggered()
 
 void MainWindow::on_actionFind_and_replace_triggered()
 {
-    QString text_from_plain = ui->textEdit->toPlainText();
-    m_sec_win.m_text = text_from_plain.toStdString();
+    //QString text_from_plain = ui->TextEdit->toPlainText();
+    //text_from_plain.toStdString
+    m_sec_win.setText(ui->TextEdit);
     m_sec_win.show();
 }

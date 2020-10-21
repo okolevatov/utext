@@ -16,9 +16,12 @@
 #include <QResizeEvent>
 #include <QDebug>
 #include <QFileInfo>
+#include <QPlainTextEdit>
+#include <QPalette>
 
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 #include "main_lib.h"
 #include "findandreplace.h"
@@ -66,7 +69,7 @@ private slots: // all actions
 
     void edit();
 
-// protected:
+protected:
 //     void resizeEvent(QResizeEvent* event);
 
 private:

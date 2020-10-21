@@ -1,7 +1,11 @@
 #pragma once
 
 #include <QDialog>
+#include <QTextEdit>
+
 #include <iostream>
+#include <string>
+#include <regex>
 
 namespace Ui {
   class FindAndReplace;
@@ -14,6 +18,11 @@ class FindAndReplace : public QDialog
 public:
   explicit FindAndReplace(QWidget *parent = nullptr);
   ~FindAndReplace();
+  void setText(QTextEdit *text_edit);
+
+  void find(QTextEdit *find);
+
+  void clear_text_format();
 
 private slots:
   void on_pushButton_clicked();
@@ -25,6 +34,5 @@ protected:
 
 private:
   Ui::FindAndReplace *ui;
-  std::string m_text;
+  QTextEdit *m_text_edit;
 };
-//closeEvent(), done()QDialog::Rejected.
