@@ -15,10 +15,8 @@ FindAndReplace::~FindAndReplace()
 }
 
 //find
-void FindAndReplace::find(QTextEdit *find) {
-    QString find_text = find->toPlainText();
-
-    std::string finding = find->toPlainText().toStdString();
+void FindAndReplace::find(QString find_text) {
+    std::string finding = find_text.toStdString();
 
     std::string str = m_text_edit->toPlainText().toStdString();
 
@@ -41,6 +39,27 @@ void FindAndReplace::find(QTextEdit *find) {
     }
 }
 
+//find_and_replace
+void FindAndReplace::find_and_replace(QTextEdit *find, QString replace_text) {
+    QString find_text = find->toPlainText();
+
+    QString str = m_text_edit->toPlainText();
+
+    QTextCursor cursor = m_text_edit->textCursor();
+
+    if (!str.isEmpty() && !find_text.isEmpty() && !replace_text.isEmpty()) {
+        int pos = str.toStdString().find(find_text.toStdString());
+        str = str.toLower();
+        find_text = find_text.toLower();
+        while (pos != -1) {
+            cursor.setPosition(pos);
+            str.replace(pos, find_text.length(), replace_text);
+            pos = str.toStdString().find(find_text.toStdString(), pos + 1);
+        }
+        m_text_edit->setPlainText(str);
+    }
+}
+
 
 void FindAndReplace::clear_text_format() {
     QTextCursor cursor = m_text_edit->textCursor();
@@ -55,16 +74,18 @@ void FindAndReplace::clear_text_format() {
 void FindAndReplace::on_pushButton_clicked()
 {
     clear_text_format();
-    find(ui->textEdit);
+    find(ui->textEdit->toPlainText());
 }
 
 //replace on
 void FindAndReplace::on_pushButton_2_clicked()
 {
-    clear_text_format();
-    find(ui->textEdit_2);
     QString replace_text = ui->textEdit_3->toPlainText();
-    std::cout << " need to replace on " << replace_text.toStdString() << "\n";
+
+    clear_text_format();
+    find(ui->textEdit_2->toPlainText());
+    find_and_replace(ui->textEdit_2, replace_text);
+    find(replace_text);
 }
 
 void FindAndReplace::done(int r) {

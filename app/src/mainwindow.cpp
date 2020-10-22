@@ -7,12 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
     m_model(new QFileSystemModel(this)),
     m_edits(new QAction("Edit"))
 {
-	QPalette mainPalette = palette();
-	mainPalette.setColor(backgroundRole(), QColor(44, 238, 214));
-	setPalette(mainPalette);
-	setAutoFillBackground(true);
-	// ui->centralWidget->setPalette(mainPalette); SIGFAULT
-	
+
     ui->setupUi(this);
     ui->menuBar->setNativeMenuBar(false);
 

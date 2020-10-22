@@ -20,7 +20,9 @@ public:
   ~FindAndReplace();
   void setText(QTextEdit *text_edit);
 
-  void find(QTextEdit *find);
+  void find(QString find_text);
+
+  void find_and_replace(QTextEdit *find, QString replace_text);
 
   void clear_text_format();
 
