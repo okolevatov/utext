@@ -2,6 +2,7 @@
 
 #include <QDialog>
 #include <QTextEdit>
+#include <QPlainTextEdit>
 
 #include <iostream>
 #include <string>
@@ -18,7 +19,7 @@ class FindAndReplace : public QDialog
 public:
   explicit FindAndReplace(QWidget *parent = nullptr);
   ~FindAndReplace();
-  void setText(QTextEdit *text_edit);
+  void setText(QPlainTextEdit *text_edit);
 
   void find(QString find_text);
 
@@ -36,5 +37,5 @@ protected:
 
 private:
   Ui::FindAndReplace *ui;
-  QTextEdit *m_text_edit;
+  QPlainTextEdit *m_text_edit;
 };

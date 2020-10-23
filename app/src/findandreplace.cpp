@@ -97,6 +97,6 @@ void FindAndReplace::done(int r) {
         hide();
     }
 }
-void FindAndReplace::setText(QTextEdit *text_edit) {
+void FindAndReplace::setText(QPlainTextEdit *text_edit) {
     m_text_edit = text_edit;
 }
