@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+cdd7734ffb04082565348bc2d87ec0df app/CMakeFiles/utext_autogen
+e2568a68f9940088231e6a909ca8a92f app/src/CMakeFiles/liba_autogen

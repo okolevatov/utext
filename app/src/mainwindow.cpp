@@ -4,29 +4,37 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent), ui(new Ui::MainWindow), 
+    TextEdit(new CodeEditor(parent)),
     m_model(new QFileSystemModel(this)),
     m_edits(new QAction("Edit"))
 {
-
     ui->setupUi(this);
     ui->menuBar->setNativeMenuBar(false);
 
     QObject::connect(m_edits, SIGNAL(triggered()), this, SLOT(edit()));
     ui->menuBar->addAction(m_edits);
+
+    ui->horizontalLayout_3->addWidget(TextEdit);
     
     ui->treeView->setModel(m_model);
     ui->treeView->setHeaderHidden(true);
     ui->treeView->setSelectionBehavior (QAbstractItemView::SelectRows);
     for (int i = 1; i < m_model->columnCount(); i++)
         ui->treeView->hideColumn(i);
-    ui->actionUndo->setIcon(QIcon("./app/resources/undo.svg"));
-    ui->actionRedo->setIcon(QIcon("./app/resources/redo.svg"));
+    ui->actionUndo->setIcon(QIcon("./app/resources/back-arrow.svg"));
+    ui->actionRedo->setIcon(QIcon("./app/resources/redo-arrow.svg"));
+    ui->actionCut->setIcon(QIcon("./app/resources/scissors.svg"));
+    ui->actionCopy->setIcon(QIcon("./app/resources/copy.svg"));
+    ui->actionPaste->setIcon(QIcon("./app/resources/paste.svg"));
     ui->toolBar->hide();
     QObject::connect(ui->treeView, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(elementClicked(QModelIndex)));
 }
 
 void MainWindow::edit() {
-    ui->toolBar->show();
+    if (!ui->toolBar->isVisible())
+        ui->toolBar->show();
+    else
+        ui->toolBar->hide();
 }
 
 void MainWindow::elementClicked(const QModelIndex& current) {
@@ -46,12 +54,15 @@ void MainWindow::elementClicked(const QModelIndex& current) {
     QFile file(tmp_path);
     if (file.open(QFile::ReadOnly | QFile::Text)) {
         QTextStream in(&file);
-        ui->TextEdit->setPlainText(in.readAll());
+        TextEdit->setPlainText(in.readAll());
     }
 }
 
 MainWindow::~MainWindow()
 {
+    delete m_model;
+    delete m_edits;
+    delete TextEdit;
     delete ui;
 }
 
@@ -90,7 +101,7 @@ void MainWindow::on_actionOpen_File_triggered() {
 
         QTextStream in(&file);
         QString text = in.readAll();
-        ui->TextEdit->setPlainText(text);
+        TextEdit->setPlainText(text);
     }
 }
 
@@ -130,33 +141,31 @@ void MainWindow::on_actionNormal_Mode_triggered()
 
 void MainWindow::on_actionUndo_triggered()
 {
-    ui->TextEdit->undo();
+    TextEdit->undo();
 }
 
 void MainWindow::on_actionRedo_triggered()
 {
-    ui->TextEdit->redo();
+    TextEdit->redo();
 }
 
 void MainWindow::on_actionCopy_triggered()
 {
-    ui->TextEdit->copy();
+    TextEdit->copy();
 }
 
 void MainWindow::on_actionCut_triggered()
 {
-    ui->TextEdit->cut();
+    TextEdit->cut();
 }
 
 void MainWindow::on_actionPaste_triggered()
 {
-    ui->TextEdit->paste();
+    TextEdit->paste();
 }
 
 void MainWindow::on_actionFind_and_replace_triggered()
 {
-    //QString text_from_plain = ui->TextEdit->toPlainText();
-    //text_from_plain.toStdString
-    m_sec_win.setText(ui->TextEdit);
+    m_sec_win.setText(TextEdit);
     m_sec_win.show();
 }

@@ -25,6 +25,9 @@
 
 #include "main_lib.h"
 #include "findandreplace.h"
+#include "codeeditor.h"
+
+class CodeEditor;
 
 namespace Ui {
     class MainWindow;
@@ -74,6 +77,7 @@ protected:
 
 private:
     Ui::MainWindow *ui;
+    CodeEditor *TextEdit;
     FindAndReplace m_sec_win;
     QString m_path_file;
     QString m_path_dir;
