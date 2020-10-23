@@ -114,7 +114,7 @@ void MainWindow::on_actionSave_triggered()
         QFileInfo fileInfo(m_path_file);
 
         QTextStream in(&file);
-        in << ui->TextEdit->toPlainText();
+        in << TextEdit->toPlainText();
     }
 }
 
