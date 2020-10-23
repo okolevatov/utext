@@ -93,6 +93,7 @@ void FindAndReplace::done(int r) {
     if(r == 0) {
         ui->textEdit->setPlainText("");
         ui->textEdit_2->setPlainText("");
+        ui->textEdit_3->setPlainText("");
         hide();
     }
 }

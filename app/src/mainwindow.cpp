@@ -97,6 +97,14 @@ void MainWindow::on_actionOpen_File_triggered() {
 void MainWindow::on_actionSave_triggered()
 {
     std::cout << "Saved\n";
+    QFile file(m_path_file);
+
+    if (file.open(QFile::Text | QFile::WriteOnly)) {
+        QFileInfo fileInfo(m_path_file);
+
+        QTextStream in(&file);
+        in << ui->TextEdit->toPlainText();
+    }
 }
 
 void MainWindow::on_actionSave_as_triggered()
