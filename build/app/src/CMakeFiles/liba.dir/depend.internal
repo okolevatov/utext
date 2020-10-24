@@ -6,21 +6,25 @@ app/src/CMakeFiles/liba.dir/codeeditor.cpp.o
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QDir
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QFileInfo
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QModelIndex
+ /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QRegularExpression
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QStringList
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QTextStream
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qabstractitemmodel.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qdebug.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qdir.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qfileinfo.h
+ /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qregularexpression.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qstringlist.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qtextstream.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QPainter
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QPalette
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QResizeEvent
+ /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QSyntaxHighlighter
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QTextBlock
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qevent.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qpainter.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qpalette.h
+ /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qsyntaxhighlighter.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qtextobject.h
  /Users/okolevatov/.brew/opt/qt/lib/QtWidgets.framework/Headers/QApplication
  /Users/okolevatov/.brew/opt/qt/lib/QtWidgets.framework/Headers/QDialog
@@ -49,6 +53,7 @@ app/src/CMakeFiles/liba.dir/codeeditor.cpp.o
  /Users/okolevatov/okolevatov/utext/app/src/codeeditor.cpp
  /Users/okolevatov/okolevatov/utext/app/src/codeeditor.h
  /Users/okolevatov/okolevatov/utext/app/src/findandreplace.h
+ /Users/okolevatov/okolevatov/utext/app/src/highlighter.h
  /Users/okolevatov/okolevatov/utext/app/src/main_lib.h
  /Users/okolevatov/okolevatov/utext/app/src/mainwindow.h
 app/src/CMakeFiles/liba.dir/findandreplace.cpp.o
@@ -61,6 +66,13 @@ app/src/CMakeFiles/liba.dir/findandreplace.cpp.o
  /Users/okolevatov/okolevatov/utext/app/src/findandreplace.cpp
  /Users/okolevatov/okolevatov/utext/app/src/findandreplace.h
  app/src/liba_autogen/include/ui_findandreplace.h
+app/src/CMakeFiles/liba.dir/highlighter.cpp.o
+ /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QRegularExpression
+ /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qregularexpression.h
+ /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QSyntaxHighlighter
+ /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qsyntaxhighlighter.h
+ /Users/okolevatov/okolevatov/utext/app/src/highlighter.cpp
+ /Users/okolevatov/okolevatov/utext/app/src/highlighter.h
 app/src/CMakeFiles/liba.dir/lib.cpp.o
  /Users/okolevatov/okolevatov/utext/app/src/lib.cpp
  /Users/okolevatov/okolevatov/utext/app/src/main_lib.h
@@ -69,21 +81,25 @@ app/src/CMakeFiles/liba.dir/liba_autogen/mocs_compilation.cpp.o
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QDir
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QFileInfo
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QModelIndex
+ /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QRegularExpression
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QStringList
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QTextStream
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qabstractitemmodel.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qdebug.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qdir.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qfileinfo.h
+ /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qregularexpression.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qstringlist.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qtextstream.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QPainter
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QPalette
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QResizeEvent
+ /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QSyntaxHighlighter
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QTextBlock
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qevent.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qpainter.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qpalette.h
+ /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qsyntaxhighlighter.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qtextobject.h
  /Users/okolevatov/.brew/opt/qt/lib/QtWidgets.framework/Headers/QApplication
  /Users/okolevatov/.brew/opt/qt/lib/QtWidgets.framework/Headers/QDialog
@@ -111,10 +127,12 @@ app/src/CMakeFiles/liba.dir/liba_autogen/mocs_compilation.cpp.o
  /Users/okolevatov/.brew/opt/qt/lib/QtWidgets.framework/Headers/qwidget.h
  /Users/okolevatov/okolevatov/utext/app/src/codeeditor.h
  /Users/okolevatov/okolevatov/utext/app/src/findandreplace.h
+ /Users/okolevatov/okolevatov/utext/app/src/highlighter.h
  /Users/okolevatov/okolevatov/utext/app/src/main_lib.h
  /Users/okolevatov/okolevatov/utext/app/src/mainwindow.h
  /Users/okolevatov/okolevatov/utext/build/app/src/liba_autogen/EWIEGA46WW/moc_codeeditor.cpp
  /Users/okolevatov/okolevatov/utext/build/app/src/liba_autogen/EWIEGA46WW/moc_findandreplace.cpp
+ /Users/okolevatov/okolevatov/utext/build/app/src/liba_autogen/EWIEGA46WW/moc_highlighter.cpp
  /Users/okolevatov/okolevatov/utext/build/app/src/liba_autogen/EWIEGA46WW/moc_mainwindow.cpp
  /Users/okolevatov/okolevatov/utext/build/app/src/liba_autogen/mocs_compilation.cpp
 app/src/CMakeFiles/liba.dir/mainwindow.cpp.o
@@ -122,21 +140,25 @@ app/src/CMakeFiles/liba.dir/mainwindow.cpp.o
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QDir
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QFileInfo
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QModelIndex
+ /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QRegularExpression
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QStringList
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QTextStream
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qabstractitemmodel.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qdebug.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qdir.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qfileinfo.h
+ /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qregularexpression.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qstringlist.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qtextstream.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QPainter
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QPalette
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QResizeEvent
+ /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QSyntaxHighlighter
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QTextBlock
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qevent.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qpainter.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qpalette.h
+ /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qsyntaxhighlighter.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qtextobject.h
  /Users/okolevatov/.brew/opt/qt/lib/QtWidgets.framework/Headers/QApplication
  /Users/okolevatov/.brew/opt/qt/lib/QtWidgets.framework/Headers/QDialog
@@ -164,6 +186,7 @@ app/src/CMakeFiles/liba.dir/mainwindow.cpp.o
  /Users/okolevatov/.brew/opt/qt/lib/QtWidgets.framework/Headers/qwidget.h
  /Users/okolevatov/okolevatov/utext/app/src/codeeditor.h
  /Users/okolevatov/okolevatov/utext/app/src/findandreplace.h
+ /Users/okolevatov/okolevatov/utext/app/src/highlighter.h
  /Users/okolevatov/okolevatov/utext/app/src/main_lib.h
  /Users/okolevatov/okolevatov/utext/app/src/mainwindow.cpp
  /Users/okolevatov/okolevatov/utext/app/src/mainwindow.h

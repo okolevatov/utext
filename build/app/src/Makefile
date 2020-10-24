@@ -213,6 +213,33 @@ findandreplace.cpp.s:
 	cd /Users/okolevatov/okolevatov/utext/build && $(MAKE) $(MAKESILENT) -f app/src/CMakeFiles/liba.dir/build.make app/src/CMakeFiles/liba.dir/findandreplace.cpp.s
 .PHONY : findandreplace.cpp.s
 
+highlighter.o: highlighter.cpp.o
+
+.PHONY : highlighter.o
+
+# target to build an object file
+highlighter.cpp.o:
+	cd /Users/okolevatov/okolevatov/utext/build && $(MAKE) $(MAKESILENT) -f app/src/CMakeFiles/liba.dir/build.make app/src/CMakeFiles/liba.dir/highlighter.cpp.o
+.PHONY : highlighter.cpp.o
+
+highlighter.i: highlighter.cpp.i
+
+.PHONY : highlighter.i
+
+# target to preprocess a source file
+highlighter.cpp.i:
+	cd /Users/okolevatov/okolevatov/utext/build && $(MAKE) $(MAKESILENT) -f app/src/CMakeFiles/liba.dir/build.make app/src/CMakeFiles/liba.dir/highlighter.cpp.i
+.PHONY : highlighter.cpp.i
+
+highlighter.s: highlighter.cpp.s
+
+.PHONY : highlighter.s
+
+# target to generate assembly for a file
+highlighter.cpp.s:
+	cd /Users/okolevatov/okolevatov/utext/build && $(MAKE) $(MAKESILENT) -f app/src/CMakeFiles/liba.dir/build.make app/src/CMakeFiles/liba.dir/highlighter.cpp.s
+.PHONY : highlighter.cpp.s
+
 lib.o: lib.cpp.o
 
 .PHONY : lib.o
@@ -310,6 +337,9 @@ help:
 	@echo "... findandreplace.o"
 	@echo "... findandreplace.i"
 	@echo "... findandreplace.s"
+	@echo "... highlighter.o"
+	@echo "... highlighter.i"
+	@echo "... highlighter.s"
 	@echo "... lib.o"
 	@echo "... lib.i"
 	@echo "... lib.s"

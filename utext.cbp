@@ -239,6 +239,12 @@
 		<Unit filename="/Users/okolevatov/okolevatov/utext/app/main.cpp">
 			<Option target="utext"/>
 		</Unit>
+		<Unit filename="/Users/okolevatov/okolevatov/utext/app/src/codeeditor.cpp">
+			<Option target="liba"/>
+		</Unit>
+		<Unit filename="/Users/okolevatov/okolevatov/utext/app/src/codeeditor.h">
+			<Option target="liba"/>
+		</Unit>
 		<Unit filename="/Users/okolevatov/okolevatov/utext/app/src/findandreplace.cpp">
 			<Option target="liba"/>
 		</Unit>

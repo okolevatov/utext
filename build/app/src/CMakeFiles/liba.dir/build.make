@@ -141,13 +141,27 @@ app/src/CMakeFiles/liba.dir/codeeditor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/liba.dir/codeeditor.cpp.s"
 	cd /Users/okolevatov/okolevatov/utext/build/app/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/okolevatov/okolevatov/utext/app/src/codeeditor.cpp -o CMakeFiles/liba.dir/codeeditor.cpp.s
 
+app/src/CMakeFiles/liba.dir/highlighter.cpp.o: app/src/CMakeFiles/liba.dir/flags.make
+app/src/CMakeFiles/liba.dir/highlighter.cpp.o: ../app/src/highlighter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/okolevatov/okolevatov/utext/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object app/src/CMakeFiles/liba.dir/highlighter.cpp.o"
+	cd /Users/okolevatov/okolevatov/utext/build/app/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/liba.dir/highlighter.cpp.o -c /Users/okolevatov/okolevatov/utext/app/src/highlighter.cpp
+
+app/src/CMakeFiles/liba.dir/highlighter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/liba.dir/highlighter.cpp.i"
+	cd /Users/okolevatov/okolevatov/utext/build/app/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/okolevatov/okolevatov/utext/app/src/highlighter.cpp > CMakeFiles/liba.dir/highlighter.cpp.i
+
+app/src/CMakeFiles/liba.dir/highlighter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/liba.dir/highlighter.cpp.s"
+	cd /Users/okolevatov/okolevatov/utext/build/app/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/okolevatov/okolevatov/utext/app/src/highlighter.cpp -o CMakeFiles/liba.dir/highlighter.cpp.s
+
 # Object files for target liba
 liba_OBJECTS = \
 "CMakeFiles/liba.dir/liba_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/liba.dir/mainwindow.cpp.o" \
 "CMakeFiles/liba.dir/lib.cpp.o" \
 "CMakeFiles/liba.dir/findandreplace.cpp.o" \
-"CMakeFiles/liba.dir/codeeditor.cpp.o"
+"CMakeFiles/liba.dir/codeeditor.cpp.o" \
+"CMakeFiles/liba.dir/highlighter.cpp.o"
 
 # External object files for target liba
 liba_EXTERNAL_OBJECTS =
@@ -157,9 +171,10 @@ app/src/libliba.a: app/src/CMakeFiles/liba.dir/mainwindow.cpp.o
 app/src/libliba.a: app/src/CMakeFiles/liba.dir/lib.cpp.o
 app/src/libliba.a: app/src/CMakeFiles/liba.dir/findandreplace.cpp.o
 app/src/libliba.a: app/src/CMakeFiles/liba.dir/codeeditor.cpp.o
+app/src/libliba.a: app/src/CMakeFiles/liba.dir/highlighter.cpp.o
 app/src/libliba.a: app/src/CMakeFiles/liba.dir/build.make
 app/src/libliba.a: app/src/CMakeFiles/liba.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/okolevatov/okolevatov/utext/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libliba.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/okolevatov/okolevatov/utext/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libliba.a"
 	cd /Users/okolevatov/okolevatov/utext/build/app/src && $(CMAKE_COMMAND) -P CMakeFiles/liba.dir/cmake_clean_target.cmake
 	cd /Users/okolevatov/okolevatov/utext/build/app/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/liba.dir/link.txt --verbose=$(VERBOSE)
 

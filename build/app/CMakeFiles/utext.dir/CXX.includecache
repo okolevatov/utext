@@ -28,6 +28,12 @@ string
 regex
 -
 
+../app/src/highlighter.h
+QSyntaxHighlighter
+-
+QRegularExpression
+-
+
 ../app/src/main_lib.h
 
 ../app/src/mainwindow.h
@@ -79,6 +85,8 @@ findandreplace.h
 ../app/src/findandreplace.h
 codeeditor.h
 ../app/src/codeeditor.h
+highlighter.h
+../app/src/highlighter.h
 
 /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QDebug
 qdebug.h
@@ -95,6 +103,10 @@ qfileinfo.h
 /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QModelIndex
 qabstractitemmodel.h
 /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qabstractitemmodel.h
+
+/Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QRegularExpression
+qregularexpression.h
+/Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qregularexpression.h
 
 /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QStringList
 qstringlist.h
@@ -166,6 +178,18 @@ QtCore/qshareddata.h
 QtCore/qmetatype.h
 -
 
+/Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qregularexpression.h
+QtCore/qglobal.h
+-
+QtCore/qstring.h
+-
+QtCore/qstringview.h
+-
+QtCore/qshareddata.h
+-
+QtCore/qvariant.h
+-
+
 /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qstringlist.h
 QtCore/qlist.h
 -
@@ -205,6 +229,10 @@ qpalette.h
 /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QResizeEvent
 qevent.h
 /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qevent.h
+
+/Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QSyntaxHighlighter
+qsyntaxhighlighter.h
+/Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qsyntaxhighlighter.h
 
 /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QTextBlock
 qtextobject.h
@@ -282,6 +310,14 @@ QtGui/qwindowdefs.h
 QtGui/qcolor.h
 -
 QtGui/qbrush.h
+-
+
+/Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qsyntaxhighlighter.h
+QtGui/qtguiglobal.h
+-
+QtCore/qobject.h
+-
+QtGui/qtextobject.h
 -
 
 /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qtextobject.h

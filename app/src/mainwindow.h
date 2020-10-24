@@ -26,8 +26,10 @@
 #include "main_lib.h"
 #include "findandreplace.h"
 #include "codeeditor.h"
+#include "highlighter.h"
 
 class CodeEditor;
+class Highlighter;
 
 namespace Ui {
     class MainWindow;
@@ -35,7 +37,7 @@ namespace Ui {
 
 class MainWindow : public QMainWindow
 {
-      Q_OBJECT
+Q_OBJECT
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
@@ -83,4 +85,5 @@ private:
     QString m_path_dir;
     QFileSystemModel *m_model;
     QAction *m_edits;
+    Highlighter *m_highlighter;
 };

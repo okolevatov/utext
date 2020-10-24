@@ -4,27 +4,32 @@
 app/CMakeFiles/utext.dir/main.cpp.o
  ../app/src/codeeditor.h
  ../app/src/findandreplace.h
+ ../app/src/highlighter.h
  ../app/src/main_lib.h
  ../app/src/mainwindow.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QDebug
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QDir
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QFileInfo
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QModelIndex
+ /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QRegularExpression
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QStringList
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QTextStream
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qabstractitemmodel.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qdebug.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qdir.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qfileinfo.h
+ /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qregularexpression.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qstringlist.h
  /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qtextstream.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QPainter
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QPalette
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QResizeEvent
+ /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QSyntaxHighlighter
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QTextBlock
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qevent.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qpainter.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qpalette.h
+ /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qsyntaxhighlighter.h
  /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qtextobject.h
  /Users/okolevatov/.brew/opt/qt/lib/QtWidgets.framework/Headers/QApplication
  /Users/okolevatov/.brew/opt/qt/lib/QtWidgets.framework/Headers/QDialog

@@ -20,6 +20,11 @@
 			"EWIEGA46WW/moc_findandreplace.cpp"
 		],
 		[
+			"/Users/okolevatov/okolevatov/utext/app/src/highlighter.h",
+			"MU",
+			"EWIEGA46WW/moc_highlighter.cpp"
+		],
+		[
 			"/Users/okolevatov/okolevatov/utext/app/src/main_lib.h",
 			"MU",
 			"EWIEGA46WW/moc_main_lib.cpp"
@@ -98,6 +103,7 @@
 	[
 		[ "/Users/okolevatov/okolevatov/utext/app/src/codeeditor.cpp", "MU" ],
 		[ "/Users/okolevatov/okolevatov/utext/app/src/findandreplace.cpp", "MU" ],
+		[ "/Users/okolevatov/okolevatov/utext/app/src/highlighter.cpp", "MU" ],
 		[ "/Users/okolevatov/okolevatov/utext/app/src/lib.cpp", "MU" ],
 		[ "/Users/okolevatov/okolevatov/utext/app/src/mainwindow.cpp", "MU" ]
 	],

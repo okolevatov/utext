@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/okolevatov/okolevatov/utext/app/src/codeeditor.cpp" "/Users/okolevatov/okolevatov/utext/app/src/CMakeFiles/liba.dir/codeeditor.cpp.o"
   "/Users/okolevatov/okolevatov/utext/app/src/findandreplace.cpp" "/Users/okolevatov/okolevatov/utext/app/src/CMakeFiles/liba.dir/findandreplace.cpp.o"
   "/Users/okolevatov/okolevatov/utext/app/src/lib.cpp" "/Users/okolevatov/okolevatov/utext/app/src/CMakeFiles/liba.dir/lib.cpp.o"
   "/Users/okolevatov/okolevatov/utext/app/src/liba_autogen/mocs_compilation.cpp" "/Users/okolevatov/okolevatov/utext/app/src/CMakeFiles/liba.dir/liba_autogen/mocs_compilation.cpp.o"

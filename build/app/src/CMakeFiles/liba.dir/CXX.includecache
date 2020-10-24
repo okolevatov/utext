@@ -22,6 +22,10 @@ qfileinfo.h
 qabstractitemmodel.h
 /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qabstractitemmodel.h
 
+/Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QRegularExpression
+qregularexpression.h
+/Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qregularexpression.h
+
 /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/QStringList
 qstringlist.h
 /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qstringlist.h
@@ -92,6 +96,18 @@ QtCore/qshareddata.h
 QtCore/qmetatype.h
 -
 
+/Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qregularexpression.h
+QtCore/qglobal.h
+-
+QtCore/qstring.h
+-
+QtCore/qstringview.h
+-
+QtCore/qshareddata.h
+-
+QtCore/qvariant.h
+-
+
 /Users/okolevatov/.brew/opt/qt/lib/QtCore.framework/Headers/qstringlist.h
 QtCore/qlist.h
 -
@@ -131,6 +147,10 @@ qpalette.h
 /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QResizeEvent
 qevent.h
 /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qevent.h
+
+/Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QSyntaxHighlighter
+qsyntaxhighlighter.h
+/Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qsyntaxhighlighter.h
 
 /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/QTextBlock
 qtextobject.h
@@ -208,6 +228,14 @@ QtGui/qwindowdefs.h
 QtGui/qcolor.h
 -
 QtGui/qbrush.h
+-
+
+/Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qsyntaxhighlighter.h
+QtGui/qtguiglobal.h
+-
+QtCore/qobject.h
+-
+QtGui/qtextobject.h
 -
 
 /Users/okolevatov/.brew/opt/qt/lib/QtGui.framework/Headers/qtextobject.h
@@ -424,6 +452,10 @@ QtGui/qkeysequence.h
 QtGui/qevent.h
 -
 
+/Users/okolevatov/okolevatov/utext/app/src/codeeditor.cpp
+codeeditor.h
+/Users/okolevatov/okolevatov/utext/app/src/codeeditor.h
+
 /Users/okolevatov/okolevatov/utext/app/src/codeeditor.h
 mainwindow.h
 /Users/okolevatov/okolevatov/utext/app/src/mainwindow.h
@@ -446,15 +478,13 @@ string
 regex
 -
 
-/Users/okolevatov/okolevatov/utext/app/src/main_lib.h
-
-/Users/okolevatov/okolevatov/utext/app/src/mainwindow.cpp
-mainwindow.h
-/Users/okolevatov/okolevatov/utext/app/src/mainwindow.h
-ui_mainwindow.h
-/Users/okolevatov/okolevatov/utext/app/src/ui_mainwindow.h
-vector
+/Users/okolevatov/okolevatov/utext/app/src/highlighter.h
+QSyntaxHighlighter
 -
+QRegularExpression
+-
+
+/Users/okolevatov/okolevatov/utext/app/src/main_lib.h
 
 /Users/okolevatov/okolevatov/utext/app/src/mainwindow.h
 QMainWindow
@@ -505,34 +535,6 @@ findandreplace.h
 /Users/okolevatov/okolevatov/utext/app/src/findandreplace.h
 codeeditor.h
 /Users/okolevatov/okolevatov/utext/app/src/codeeditor.h
-
-app/src/liba_autogen/include/ui_mainwindow.h
-QtCore/QVariant
--
-QtWidgets/QAction
--
-QtWidgets/QApplication
--
-QtWidgets/QGridLayout
--
-QtWidgets/QHBoxLayout
--
-QtWidgets/QHeaderView
--
-QtWidgets/QMainWindow
--
-QtWidgets/QMenu
--
-QtWidgets/QMenuBar
--
-QtWidgets/QSplitter
--
-QtWidgets/QStatusBar
--
-QtWidgets/QToolBar
--
-QtWidgets/QTreeView
--
-QtWidgets/QWidget
--
+highlighter.h
+/Users/okolevatov/okolevatov/utext/app/src/highlighter.h
 

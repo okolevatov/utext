@@ -10,6 +10,11 @@
 	"HEADERS" : 
 	[
 		[
+			"/Users/okolevatov/okolevatov/utext/app/src/codeeditor.h",
+			"MU",
+			"EWIEGA46WW/moc_codeeditor.cpp"
+		],
+		[
 			"/Users/okolevatov/okolevatov/utext/app/src/findandreplace.h",
 			"MU",
 			"EWIEGA46WW/moc_findandreplace.cpp"
@@ -91,6 +96,7 @@
 	"SETTINGS_FILE" : "/Users/okolevatov/okolevatov/utext/app/src/CMakeFiles/liba_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/Users/okolevatov/okolevatov/utext/app/src/codeeditor.cpp", "MU" ],
 		[ "/Users/okolevatov/okolevatov/utext/app/src/findandreplace.cpp", "MU" ],
 		[ "/Users/okolevatov/okolevatov/utext/app/src/lib.cpp", "MU" ],
 		[ "/Users/okolevatov/okolevatov/utext/app/src/mainwindow.cpp", "MU" ]

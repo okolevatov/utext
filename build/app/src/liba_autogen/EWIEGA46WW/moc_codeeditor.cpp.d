@@ -174,6 +174,7 @@
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/QDir \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/QFileInfo \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/QModelIndex \
+  /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/QRegularExpression \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/QStringList \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/QTextStream \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtCore.framework/Versions/5/Headers/qabstractitemmodel.h \
@@ -253,6 +254,7 @@
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/QPainter \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/QPalette \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/QResizeEvent \
+  /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/QSyntaxHighlighter \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/QTextBlock \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qabstracttextdocumentlayout.h \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qbrush.h \
@@ -281,6 +283,7 @@
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qregion.h \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qrgb.h \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qrgba64.h \
+  /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qsyntaxhighlighter.h \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qtextcursor.h \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qtextdocument.h \
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtGui.framework/Versions/5/Headers/qtextformat.h \
@@ -341,5 +344,6 @@
   /Users/okolevatov/.brew/Cellar/qt/5.15.1/lib/QtWidgets.framework/Versions/5/Headers/qwidget.h \
   /Users/okolevatov/okolevatov/utext/app/src/codeeditor.h \
   /Users/okolevatov/okolevatov/utext/app/src/findandreplace.h \
+  /Users/okolevatov/okolevatov/utext/app/src/highlighter.h \
   /Users/okolevatov/okolevatov/utext/app/src/main_lib.h \
   /Users/okolevatov/okolevatov/utext/app/src/mainwindow.h
