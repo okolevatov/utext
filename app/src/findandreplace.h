@@ -32,10 +32,16 @@ private slots:
 
   void on_pushButton_2_clicked();
 
+  void on_registerBox_clicked();
+
+  void on_syntaxBox_clicked();
+
 protected:
 	void done(int r);
 
 private:
   Ui::FindAndReplace *ui;
   QPlainTextEdit *m_text_edit;
+  bool m_reg;
+  bool m_syntax;
 };

@@ -117,6 +117,32 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
+  <widget class="QCheckBox" name="registerBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>190</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Strict register</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="syntaxBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>220</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A separate word</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
