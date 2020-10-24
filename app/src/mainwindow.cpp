@@ -53,7 +53,9 @@ void MainWindow::elementClicked(const QModelIndex& current) {
     }
     QFile file(tmp_path);
     if (file.open(QFile::ReadOnly | QFile::Text)) {
+        m_highlighter = new Highlighter(TextEdit->document());
         QTextStream in(&file);
+        m_path_file = tmp_path;
         TextEdit->setPlainText(in.readAll());
     }
 }
@@ -95,6 +97,7 @@ void MainWindow::on_actionOpen_File_triggered() {
         m_path_file = filename;
         QFileInfo fileInfo(filename);
         m_path_dir = fileInfo.dir().absolutePath();
+        m_highlighter = new Highlighter(TextEdit->document());
 
         m_model->setRootPath(m_path_dir); 
         ui->treeView->setRootIndex(m_model->index(m_path_dir));

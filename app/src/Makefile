@@ -159,6 +159,33 @@ liba_autogen/fast:
 	cd /Users/okolevatov/okolevatov/utext && $(MAKE) $(MAKESILENT) -f app/src/CMakeFiles/liba_autogen.dir/build.make app/src/CMakeFiles/liba_autogen.dir/build
 .PHONY : liba_autogen/fast
 
+codeeditor.o: codeeditor.cpp.o
+
+.PHONY : codeeditor.o
+
+# target to build an object file
+codeeditor.cpp.o:
+	cd /Users/okolevatov/okolevatov/utext && $(MAKE) $(MAKESILENT) -f app/src/CMakeFiles/liba.dir/build.make app/src/CMakeFiles/liba.dir/codeeditor.cpp.o
+.PHONY : codeeditor.cpp.o
+
+codeeditor.i: codeeditor.cpp.i
+
+.PHONY : codeeditor.i
+
+# target to preprocess a source file
+codeeditor.cpp.i:
+	cd /Users/okolevatov/okolevatov/utext && $(MAKE) $(MAKESILENT) -f app/src/CMakeFiles/liba.dir/build.make app/src/CMakeFiles/liba.dir/codeeditor.cpp.i
+.PHONY : codeeditor.cpp.i
+
+codeeditor.s: codeeditor.cpp.s
+
+.PHONY : codeeditor.s
+
+# target to generate assembly for a file
+codeeditor.cpp.s:
+	cd /Users/okolevatov/okolevatov/utext && $(MAKE) $(MAKESILENT) -f app/src/CMakeFiles/liba.dir/build.make app/src/CMakeFiles/liba.dir/codeeditor.cpp.s
+.PHONY : codeeditor.cpp.s
+
 findandreplace.o: findandreplace.cpp.o
 
 .PHONY : findandreplace.o
@@ -277,6 +304,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... liba_autogen"
 	@echo "... liba"
+	@echo "... codeeditor.o"
+	@echo "... codeeditor.i"
+	@echo "... codeeditor.s"
 	@echo "... findandreplace.o"
 	@echo "... findandreplace.i"
 	@echo "... findandreplace.s"
