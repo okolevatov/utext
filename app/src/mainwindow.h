@@ -74,7 +74,7 @@ private slots: // all actions
 
     void edit();
 
-protected:
+//protected:
 //     void resizeEvent(QResizeEvent* event);
 
 private:

@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->menuBar->setNativeMenuBar(false);
+    setWindowTitle("VENTANA DE MUERTE");
 
     QObject::connect(m_edits, SIGNAL(triggered()), this, SLOT(edit()));
     ui->menuBar->addAction(m_edits);

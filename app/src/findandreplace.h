@@ -12,8 +12,7 @@ namespace Ui {
   class FindAndReplace;
 }
 
-class FindAndReplace : public QDialog
-{
+class FindAndReplace : public QDialog {
   Q_OBJECT
 
 public:
@@ -34,7 +33,7 @@ private slots:
 
   void on_registerBox_clicked();
 
-  void on_syntaxBox_clicked();
+  //void on_syntaxBox_clicked();
 
 protected:
 	void done(int r);
@@ -43,5 +42,5 @@ private:
   Ui::FindAndReplace *ui;
   QPlainTextEdit *m_text_edit;
   bool m_reg;
-  bool m_syntax;
+  //bool m_syntax;
 };

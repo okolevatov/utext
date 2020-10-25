@@ -4,10 +4,10 @@
 FindAndReplace::FindAndReplace(QWidget *parent) :
   QDialog(parent),
   ui(new Ui::FindAndReplace),
-  m_reg(false),
-  m_syntax(false)
+  m_reg(false)//, m_syntax(false)
 {
   ui->setupUi(this);
+  setFocus();
   setWindowTitle("Find & Replace");
 }
 
@@ -30,7 +30,7 @@ void FindAndReplace::find(QString find_text) {
         for(auto& s : finding)
             s = tolower(s);
     }
-    if (!m_syntax) {
+    //if (!m_syntax) {
         int pos = str.find(finding);
 
         while (pos != -1) {
@@ -38,26 +38,26 @@ void FindAndReplace::find(QString find_text) {
             cursor.setPosition(pos + finding.length(),QTextCursor::KeepAnchor);
             QTextCharFormat charFormat = cursor.charFormat();
             charFormat.setBackground(QColor(70, 163, 241));
-            charFormat.setForeground(QColor(243, 160, 160));
+            charFormat.setForeground(QColor(255, 255, 255));
             cursor.setCharFormat(charFormat);
             pos = str.find(finding, pos + 1);
         }
-    }
-    else {
-        std::smatch m;
-        std::string reg = "(\\b"+ finding +"\\b)";
-        std::regex e (reg);
+    //}
+    // else {
+    //     std::smatch m;
+    //     //std::string reg = "(\\b"+ finding +"\\b)";
+    //     std::regex e ("(\\b"+ finding +"\\b)");
 
-        while (std::regex_search (str, m, e)) {
-            cursor.setPosition(m.position());
-            cursor.setPosition(m.position() + finding.length(),QTextCursor::KeepAnchor);
-            QTextCharFormat charFormat = cursor.charFormat();
-            charFormat.setBackground(QColor(70, 163, 241));
-            charFormat.setForeground(QColor(243, 160, 160));
-            cursor.setCharFormat(charFormat);
-            str = m.suffix().str();
-        }
-    }
+    //     while (std::regex_search (str, m, e)) {
+    //         cursor.setPosition(m.position());
+    //         cursor.setPosition(m.position() + finding.length(),QTextCursor::KeepAnchor);
+    //         QTextCharFormat charFormat = cursor.charFormat();
+    //         charFormat.setBackground(QColor(70, 163, 241));
+    //         charFormat.setForeground(QColor(243, 160, 160));
+    //         cursor.setCharFormat(charFormat);
+    //         str = m.suffix().str();
+    //     }
+    // }
 }
 
 //find_and_replace
@@ -70,8 +70,11 @@ void FindAndReplace::find_and_replace(QTextEdit *find, QString replace_text) {
 
     if (!str.isEmpty() && !find_text.isEmpty() && !replace_text.isEmpty()) {
         int pos = str.toStdString().find(find_text.toStdString());
-        str = str.toLower();
-        find_text = find_text.toLower();
+        
+        if (!m_reg) {
+            str = str.toLower();
+            find_text = find_text.toLower();
+        }
         while (pos != -1) {
             cursor.setPosition(pos);
             str.replace(pos, find_text.length(), replace_text);
@@ -130,10 +133,10 @@ void FindAndReplace::on_registerBox_clicked()
         m_reg = false;
 }
 
-void FindAndReplace::on_syntaxBox_clicked()
-{
-    if (!m_syntax)
-        m_syntax = true;
-    else
-        m_syntax = false;
-}
+// void FindAndReplace::on_syntaxBox_clicked()
+// {
+//     if (!m_syntax)
+//         m_syntax = true;
+//     else
+//         m_syntax = false;
+// }
