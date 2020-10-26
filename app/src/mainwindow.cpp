@@ -111,20 +111,34 @@ void MainWindow::on_actionOpen_File_triggered() {
 
 void MainWindow::on_actionSave_triggered()
 {
-    std::cout << "Saved\n";
     QFile file(m_path_file);
 
     if (file.open(QFile::Text | QFile::WriteOnly)) {
-        QFileInfo fileInfo(m_path_file);
-
         QTextStream in(&file);
+
         in << TextEdit->toPlainText();
     }
 }
 
 void MainWindow::on_actionSave_as_triggered()
 {
-    std::cout << "Saved as\n";
+    QFileDialog dialog(0);
+    dialog.setWindowModality(Qt::WindowModal);
+    dialog.setAcceptMode(QFileDialog::AcceptSave);
+    if (dialog.exec() == QDialog::Accepted) {
+        QFile file(dialog.selectedFiles().first());
+
+        if (file.open(QFile::Text | QFile::WriteOnly)) {
+            QTextStream in(&file);
+            
+            in << TextEdit->toPlainText();
+        }
+        QFileInfo fileInfo(dialog.selectedFiles().first());
+        
+        m_path_dir = fileInfo.dir().absolutePath();
+        m_model->setRootPath(m_path_dir); 
+        ui->treeView->setRootIndex(m_model->index(m_path_dir));
+    }
 }
 
 void MainWindow::on_actionHard_Mode_triggered()
@@ -181,3 +195,4 @@ void MainWindow::on_actionFind_and_replace_triggered()
     m_sec_win.setText(TextEdit);
     m_sec_win.show();
 }
+
