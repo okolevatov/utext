@@ -16,10 +16,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->menuBar->addAction(m_edits);
 
     ui->horizontalLayout_3->addWidget(TextEdit);
+    TextEdit->setEnabled(false);
     
     ui->treeView->setModel(m_model);
     ui->treeView->setHeaderHidden(true);
     ui->treeView->setSelectionBehavior (QAbstractItemView::SelectRows);
+    ui->treeView->setContextMenuPolicy(Qt::CustomContextMenu);
+    // connect(ui->treeView, SIGNAL(customContextMenuRequested(const QPoint &)), 
+    //         this, SLOT(onCustomContextMenu(const QPoint &));
     for (int i = 1; i < m_model->columnCount(); i++)
         ui->treeView->hideColumn(i);
     ui->actionUndo->setIcon(QIcon("./app/resources/back-arrow.svg"));
@@ -28,7 +32,15 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionCopy->setIcon(QIcon("./app/resources/copy.svg"));
     ui->actionPaste->setIcon(QIcon("./app/resources/paste.svg"));
     ui->toolBar->hide();
+
     QObject::connect(ui->treeView, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(elementClicked(QModelIndex)));
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *e) {
+    if(e->type() == QKeyEvent::KeyPress) {
+        if(e->matches(QKeySequence::New))
+            new_file();
+    }
 }
 
 void MainWindow::edit() {
@@ -54,6 +66,7 @@ void MainWindow::elementClicked(const QModelIndex& current) {
     }
     QFile file(tmp_path);
     if (file.open(QFile::ReadOnly | QFile::Text)) {
+        TextEdit->setEnabled(true);
         m_highlighter = new Highlighter(TextEdit->document());
         QTextStream in(&file);
         m_path_file = tmp_path;
@@ -95,6 +108,7 @@ void MainWindow::on_actionOpen_File_triggered() {
     QFile file(filename);
 
     if (file.open(QFile::ReadOnly | QFile::Text)) {
+        TextEdit->setEnabled(true);
         m_path_file = filename;
         QFileInfo fileInfo(filename);
         m_path_dir = fileInfo.dir().absolutePath();
@@ -195,4 +209,3 @@ void MainWindow::on_actionFind_and_replace_triggered()
     m_sec_win.setText(TextEdit);
     m_sec_win.show();
 }
-

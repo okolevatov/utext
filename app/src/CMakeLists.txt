@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.18.2)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(SOURCES mainwindow.cpp lib.cpp findandreplace.cpp codeeditor.cpp highlighter.cpp)
+set(SOURCES mainwindow.cpp lib.cpp findandreplace.cpp codeeditor.cpp highlighter.cpp new_file.cpp)
 
 set(HEADERS mainwindow.h main_lib.h findandreplace.h codeeditor.h highlighter.h)
 

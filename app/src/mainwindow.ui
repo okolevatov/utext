@@ -228,6 +228,7 @@
      <addaction name="actionOpen_File"/>
     </widget>
     <addaction name="menuOpen"/>
+    <addaction name="actionNew_file"/>
     <addaction name="actionSave"/>
     <addaction name="actionSave_as"/>
    </widget>
@@ -355,6 +356,11 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionNew_file">
+   <property name="text">
+    <string>New file...</string>
    </property>
   </action>
  </widget>

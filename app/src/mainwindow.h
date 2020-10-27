@@ -72,7 +72,13 @@ private slots: // all actions
 
     void elementClicked(const QModelIndex& current);
 
+    void new_file();
+
+    void on_actionNew_file_triggered();
+
     void edit();
+
+    void keyPressEvent(QKeyEvent *e);
 
 //protected:
 //     void resizeEvent(QResizeEvent* event);
