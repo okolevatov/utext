@@ -1,4 +1,4 @@
-# 📝uText 
+# 🗒 Text Editor "VENTANA DE MUERTE"
 
 ## Description
 Text editor made with Qt GUI
