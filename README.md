@@ -32,6 +32,7 @@ If you do not have ```CMAKE_PREFIX_PATH``` you can fix it in 2 ways:
 - keyboard shortcuts for all options from Toolbar. Key combinations must be user- friendly;
 - keyboard and mouse management of carriage position;
 - ability to select a piece of text with the keyboard as well as the mouse :
+
     • the selected text is highlighted;
     • copy/cut/paste options are applied only for the selected piece of text;
     • the selected portion of text is taken for search when find/replace option is applied.
