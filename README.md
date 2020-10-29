@@ -33,11 +33,11 @@ If you do not have ```CMAKE_PREFIX_PATH``` you can fix it in 2 ways:
 - keyboard and mouse management of carriage position;
 - ability to select a piece of text with the keyboard as well as the mouse :
 
-    • the selected text is highlighted;
+    -- the selected text is highlighted;
     
-    • copy/cut/paste options are applied only for the selected piece of text;
+    -- copy/cut/paste options are applied only for the selected piece of text;
     
-    • the selected portion of text is taken for search when find/replace option is applied.
+    -- the selected portion of text is taken for search when find/replace option is applied.
     
 - horizontal and vertical scroll if the Text area is smaller than the content available;
 - syntax highlighting for source code;
