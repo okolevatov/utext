@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     ui->horizontalLayout_3->addWidget(TextEdit);
-    TextEdit->setEnabled(false);
+    // TextEdit->setEnabled(false);
     
     ui->treeView->setModel(m_model);
     ui->treeView->setHeaderHidden(true);
@@ -68,7 +68,7 @@ void MainWindow::elementClicked(const QModelIndex& current) {
     }
     QFile file(tmp_path);
     if (file.open(QFile::ReadOnly | QFile::Text)) {
-        TextEdit->setEnabled(true);
+        // TextEdit->setEnabled(true);
         m_highlighter = new Highlighter(TextEdit->document());
         QTextStream in(&file);
         m_path_file = tmp_path;
@@ -110,7 +110,7 @@ void MainWindow::on_actionOpen_File_triggered() {
     QFile file(filename);
 
     if (file.open(QFile::ReadOnly | QFile::Text)) {
-        TextEdit->setEnabled(true);
+        // TextEdit->setEnabled(true);
         m_path_file = filename;
         QFileInfo fileInfo(filename);
         m_path_dir = fileInfo.dir().absolutePath();
