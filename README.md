@@ -1,4 +1,4 @@
-# 🗒 Text Editor "VENTANA DE MUERTE"
+# 🗒 Text Editor "Ventana de muerte"
 
 ## Description
 Text editor made with Qt GUI
@@ -19,17 +19,22 @@ If you do not have ```CMAKE_PREFIX_PATH``` you can fix it in 2 ways:
     ./build.sh
 
 ### Run
-    utext 
+    ./utext 
 
 ## App features
-- open directories and single files
-- list opened directory files and subdirectories in the Tree area. 
-- open files from the Tree area for reading/editing 
-- save files after editing
-- copy/cut/paste options in the Toolbar
-- find/replace/undo/redo options in the Toolbar 
-- keyboard shortcuts
-- ability to copy/cut/paste/find/replace for the selected piece of text
-- syntax highlighting for source code, markup languages, config files and other text that appears in an organized or predictable format (you can change highliting color)
-- highlighting when typing
-- error handling with the GUI
+- open directories and single files;
+- list opened directory files and subdirectories in the tree area;
+- open files from the Tree area for reading/editing in the text area;
+- save files after editing;
+- copy/cut/paste options in the Toolbar;
+- find and replace options in the Toolbar;
+- undo and redo options in the Toolbar;
+- keyboard shortcuts for all options from Toolbar. Key combinations must be user- friendly;
+- keyboard and mouse management of carriage position;
+- ability to select a piece of text with the keyboard as well as the mouse:
+    • the selected text is highlighted;
+    • copy/cut/paste options are applied only for the selected piece of text;
+    • the selected portion of text is taken for search when find/replace option is applied.
+- horizontal and vertical scroll if the Text area is smaller than the content available;
+- syntax highlighting for source code;
+- line wrapping. Fit long lines into display area without horizontal scrolling.
