@@ -18,6 +18,7 @@
 #include <QFileInfo>
 #include <QPlainTextEdit>
 #include <QPalette>
+#include <QLabel>
 
 #include <iostream>
 #include <string>
@@ -79,6 +80,8 @@ private slots: // all actions
     void edit();
 
     void keyPressEvent(QKeyEvent *e);
+
+    void showCursorPos();
 
 //protected:
 //     void resizeEvent(QResizeEvent* event);

@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(m_edits, SIGNAL(triggered()), this, SLOT(edit()));
     ui->menuBar->addAction(m_edits);
 
+
     ui->horizontalLayout_3->addWidget(TextEdit);
     TextEdit->setEnabled(false);
     
@@ -34,6 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->toolBar->hide();
 
     QObject::connect(ui->treeView, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(elementClicked(QModelIndex)));
+    connect(TextEdit, SIGNAL(cursorPositionChanged()), this, SLOT(showCursorPos()));
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *e) {
@@ -132,6 +134,7 @@ void MainWindow::on_actionSave_triggered()
 
         in << TextEdit->toPlainText();
     }
+    ui->statusBar->showMessage("Saved");
 }
 
 void MainWindow::on_actionSave_as_triggered()
@@ -153,6 +156,7 @@ void MainWindow::on_actionSave_as_triggered()
         m_model->setRootPath(m_path_dir); 
         ui->treeView->setRootIndex(m_model->index(m_path_dir));
     }
+    //ui->statusBar->showMessage("Saved");
 }
 
 void MainWindow::on_actionHard_Mode_triggered()
@@ -208,4 +212,13 @@ void MainWindow::on_actionFind_and_replace_triggered()
 {
     m_sec_win.setText(TextEdit);
     m_sec_win.show();
+}
+
+
+void MainWindow::showCursorPos()
+{
+    int pos = TextEdit->textCursor().columnNumber() + 1;
+    int line = TextEdit->textCursor().blockNumber() + 1;
+
+    ui->statusBar->showMessage(QString("Line: %1, Column: %2").arg(line).arg(pos));
 }
